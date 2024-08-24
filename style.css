@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "UniteaSans";
+
+  src: url("https://itzfizzdigital.b-cdn.net/UniteaSans-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.sect-1{
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+/* #section-3{
+  padding-top: 10vh;
+} */
+
+body {
+  background: #121212;
+  color: #fafafa;
+  font-family: "UniteaSans" !important;
+  /* margin: 0 0 -100px 0; */
+  overflow-x: hidden;
+}
+.showing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+width: 100vw;
+  gap:10%;
+  padding-top: 30vh !important;
+}
+
+.container-1{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 75vw;
+}
+.container-seo{
+  background-color: #FFF355;
+  width: 20%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  >h2{
+    font-size: 58px;
+    color: #222222;
+    font-weight: 400;
+  }
+}
+.container-para{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  >p{
+    font-size: 42px;
+    color: #fff;
+    font-weight: 400;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0 20px;
+  }
+}
+@-webkit-keyframes nameEnter {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(0.92);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes nameEnter {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(0.92);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+h1 {
+  margin: 0;
+  font-size: 108px;
+  font-weight: 400;
+  text-align: left;
+  width: 60%;
+  line-height: 1em;
+  background: rgb(153,206,255);
+background: radial-gradient(circle, rgba(153,206,255,1) 0%, rgba(0,132,255,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    -webkit-animation-name: nameEnter;
+    animation-name: nameEnter;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+}
+
+
+@media (max-width: 767px) {
+  h1 {
+    margin-top: 30px;
+  }
+}
+#lll{
+  width: 100vw;
+  height: 120vh;
+  background-color: #D3EAFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#lll p{
+  color: #424242;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: normal;
+  width: 70%;
+
+}
+#lll p span{
+  color: #0084FF;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+#ttt{
+  width: 100vw;
+  height: 100vh;
+  background-color: tomato;
+}
+#lkk{
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+#tkt{
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+}
+#lhk{
+  width: 100vw;
+  height: 100vh;
+  background-color: violet;
+}
