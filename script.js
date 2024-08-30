@@ -1,51 +1,52 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger)
-  // gsap code here!
-  // gsap.from("#lll", {
-  //   scrollTrigger: {
-  //     trigger: "#section-3",
-  //     start: "bottom center",
-  //     end: "+=250px",
-  //     scrub: 3,
-  //     markers:true,
-  //   }, 
-  //   duration: 1.5,
-  //   backgroundColor: "#121212",
-  //   ease: "power2.out",
-  // });
+
   gsap.registerPlugin(ScrollTrigger);
 
 // Create a timeline
 var tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#sect-1",
-    start: "20% 25%",
+    start: "15% 25%",
     end: "+=250px",
     scrub: 3,
-    // markers: true, // Enable markers for debugging; set to false to hide them
   }
 });
 
 // Change background color of the element
-tl.from("#lll", {
+tl.from("#sect-2", {
   duration: 0.5,
   backgroundColor: "#121212",
   ease: "power2.out"
 });
 
-// Change text color of a span inside the element
-tl.to("#lll span", {
+tl.to("#sect-2 span", {
   duration: 0.5,
-  color: "#424242",  // Change this to your desired color
+  color: "#424242",
   ease: "power2.out"
-}, 0); // The 0 here makes sure the text color animation starts at the same time as the background color change
-tl.to("#lll p", {
+}, 0); 
+tl.to("#sect-2 p", {
   duration: 0.5,
-  color: "#0084FF",  // Change this to your desired color
+  color: "#0084FF",  
   ease: "power2.out"
-}, 0); // The 0 here makes sure the text color animation starts at the same time as the background color change
+}, 0); 
 
  });
+
+ var newTl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#sect-3",
+    start: "-10% 20%",
+    end: "+=400px",
+    scrub: 3,
+  }
+});
+
+newTl2.to(".sect-3-container", {
+  duration: 1.5,
+ borderTopRightRadius:750,
+ borderTopLeftRadius:750,
+  ease: "power2.out"
+}, 0);
 
 
 // Update for GSAP 3.x and ScrollTrigger
@@ -59,23 +60,25 @@ $(window).resize(function() {
 
 if (windowSize > 767) {
 
-  // Zoom animation for section-3
-  var zoomHeader = gsap.to("#section-3", {
+  // Zoom animation for section-1
+  var zoomHeader = gsap.to("#section-1", {
     scale: 35,
     x: 900,
     y: 900,
     ease: "power2.out",
     duration: 0.5,
     scrollTrigger: {
-      trigger: "#section-3",
+      trigger: "#section-1",
+      scroller:"body",
       start: "top top",
-      end: "bottom top",
+      end: "bottom 30%",
       pin: true,
       scrub: 3,
       toggleClass: "showing",
-      markers: false // Add true to visualize ScrollTrigger markers
+      markers: false 
     }
   });
+
 
   // Zoom animation for scene one
   var zoomOne = gsap.to("#one", {
