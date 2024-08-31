@@ -169,14 +169,14 @@ background: radial-gradient(circle, rgba(153,206,255,1) 0%, rgba(0,132,255,1) 10
 }
 #sect-3{
   width: 100vw;
-  height: 160vh;
+  height: 180vh;
   background-color: #D3EAFF;
 }
 
 .sect-3-container{
   background-color: #FFF355; 
   width: 100vw;
-  height: 160vh;
+  height: 180vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,8 +196,9 @@ background: radial-gradient(circle, rgba(153,206,255,1) 0%, rgba(0,132,255,1) 10
   }
 }
 .cards-container {
-  height: 80vh;
-  width: 70%;
+  /* margin-top: -5vh; */
+  height: 100vh;
+  width: 82%;
   display: flex;
     justify-content: center;
   align-items: center;
@@ -218,17 +219,93 @@ height: 100%;
 }
 .cardx{
   width: 100%;
-  height: 100%;
-  /* object-fit: contain; */
+  height: 90%;
   background-color: transparent;
-  background-color: #111;
   z-index: 999;
   border-top-right-radius: 0;
   border-top-left-radius: 71px;
   border-bottom-right-radius: 71px;
   border-bottom-left-radius: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.cardx:hover{
+.cards-1{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 40%;
+  width: 15%;
+  >svg{
+    fill: #222;
+    /* width: 50%; */
+    object-fit: contain;
+
+  }
+}
+.card-title{
+  width: 85%;
+  display: flex;
+  height: 60%;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+  position: relative;
+>h2{
+  font-size: 32px;
+  font-weight: 600;
+  padding-bottom: 2vh;
+  color: #222;
+}
+}
+
+.yellow-line {
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 0%; 
+  height: 15px; 
+  background-color: #fff355; 
+  border-radius: 50px;
+  transition: background-color 0.4s ease-in-out;
+}
+.cards-2{
+  width: 90%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* .cards-2 p{
+  background: #0084FF;
+  background: radial-gradient(circle, rgba(153,206,255,1) 0%, rgba(0,132,255,1) 100%);
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 400;
+} */
+
+.cards-2 p{
+  background: #0084FF;
+  color: #0084FF;
+  /* background: radial-gradient(circle, rgba(153,206,255,1) 0%, rgba(0,132,255,1) 100%); */
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/* .cardx:hover{
  background-color: #222222 ;
  border-top-right-radius: 0;
  border-top-left-radius: 71px;
@@ -237,10 +314,7 @@ height: 100%;
  transform: translateY(-15%) scale(1.1);
  transition:all ease-in-out 400ms;
  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.13) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-
-
+} */ 
 
 #lkk{
   width: 100vw;
