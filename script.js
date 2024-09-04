@@ -312,3 +312,55 @@ $(window).scroll(function () {
     $("#four a").removeClass("email-showing");
   }
 });
+
+///////////////////////
+
+gsap.registerPlugin(ScrollTrigger);
+
+const texts = document.querySelectorAll(".text-item");
+const images = document.querySelectorAll(".image-item");
+
+// Pin the text section so it stays fixed during scrolling
+ScrollTrigger.create({
+  trigger: ".text-section",
+  start: "top top",
+  end: "+=3000", // Adjust this for how long the pinning should last
+  pin: true,
+  pinSpacing: true,
+});
+
+// Loop through each text and create animations
+texts.forEach((text, index) => {
+  const image = images[index];
+
+  // Text size animation
+  gsap.fromTo(text, {
+    fontSize: "5px"
+  }, {
+    fontSize: "56px",
+    scrollTrigger: {
+      trigger: text,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      toggleActions: "play reverse play reverse",
+    }
+  });
+
+  // Image comes up animation
+  gsap.fromTo(image, {
+    bottom: '-100%',
+    opacity: 0,
+  }, {
+    bottom: '50%',
+    opacity: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: text,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      toggleActions: "play reverse play reverse",
+    }
+  });
+});
